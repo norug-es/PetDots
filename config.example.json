@@ -1,0 +1,8 @@
+{
+  "project": "my-repository",
+  "event_store": ".petdots/events.jsonl",
+  "agents": {
+    "backend": { "label": "Backend", "pet": "moss-crawler" },
+    "qa": { "label": "QA", "pet": "error-goblin" }
+  }
+}

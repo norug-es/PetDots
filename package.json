@@ -1,0 +1,13 @@
+{
+  "name": "petdots",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Animated agent pets for VS Code, Codex Plugin and Codex CLI",
+  "bin": { "petdots": "./cli.mjs" },
+  "files": ["*.mjs", "plugin", "vscode-extension", "schemas", "examples", "adapters"],
+  "scripts": {
+    "check": "node --check cli.mjs && node --check bridge.mjs && node --check protocol.mjs && node --check plugin/bridge.mjs",
+    "demo": "node cli.mjs demo"
+  }
+}

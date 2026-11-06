@@ -1,0 +1,1 @@
+"""PetDots integration adapters."""

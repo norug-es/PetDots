@@ -1,0 +1,17 @@
+{
+  "name": "petdots-vscode",
+  "displayName": "PetDots",
+  "description": "Animated creatures that reflect real agent events.",
+  "version": "0.1.0",
+  "publisher": "petdots",
+  "license": "MIT",
+  "engines": { "vscode": ">=1.85.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{ "command": "petdots.openWorkspace", "title": "PetDots: Open Workspace" }],
+    "viewsContainers": { "activitybar": [{ "id": "petdots", "title": "PetDots", "icon": "media/icon.svg" }] },
+    "views": { "petdots": [{ "id": "petdots.workspace", "name": "Agent Pets", "type": "webview" }] }
+  }
+}

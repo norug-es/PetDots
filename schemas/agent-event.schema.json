@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://petdots.dev/schemas/agent-event.schema.json",
+  "title": "PetDots Agent Event",
+  "type": "object",
+  "required": ["version", "id", "timestamp", "agent", "state", "message", "source", "simulated", "evidence"],
+  "properties": {
+    "version": { "const": 1 },
+    "id": { "type": "string", "minLength": 1 },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "agent": { "type": "string", "enum": ["architect", "backend", "frontend", "security", "qa", "release"] },
+    "state": { "type": "string", "enum": ["idle", "working", "blocked", "reviewing", "done"] },
+    "message": { "type": "string", "maxLength": 500 },
+    "source": { "type": "string", "maxLength": 120 },
+    "simulated": { "type": "boolean" },
+    "evidence": { "type": "array", "maxItems": 10, "items": { "type": "string", "maxLength": 300 } }
+  },
+  "additionalProperties": true
+}

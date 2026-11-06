@@ -1,0 +1,18 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "petdots",
+  "version": "0.1.0",
+  "description": "Animated agent creatures driven by verifiable local lifecycle events.",
+  "author": { "name": "PetDots" },
+  "license": "MIT",
+  "keywords": ["agents", "visualization", "codex", "vscode"],
+  "extensions": { "com.openai": { "interface": {
+    "displayName": "PetDots",
+    "shortDescription": "See your agents as creatures",
+    "longDescription": "PetDots visualizes agent lifecycle events as small animated creatures. It labels simulated events and never invents activity.",
+    "developerName": "PetDots",
+    "category": "Productivity",
+    "capabilities": ["Interactive"],
+    "defaultPrompt": "Show the current PetDots agent state and emit lifecycle events only when execution evidence exists."
+  } } }
+}
